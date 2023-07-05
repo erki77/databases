@@ -1,5 +1,5 @@
 # databases
-Materials referenced in Youtube videos
+Materials referenced in YouTube videos
 
 Videos in Estonian:
 
