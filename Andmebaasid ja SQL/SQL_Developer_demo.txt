@@ -1,0 +1,84 @@
+Ühenduse defineerimine
+Ühenduse avamine
+SQL Worksheet - käivitamine ükshaaval:
+CREATE TABLE t990999_emp(empno NUMBER(4) PRIMARY KEY);
+INSERT INTO t990999_Emp(empno) VALUES (1000);
+INSERT INTO t990999_Emp(empno) VALUES (1001);
+INSERT INTO t990999_Emp(empno) VALUES (1002);
+SELECT * FROM t990999_Emp;
+SQL Worksheet - käivitamine skriptina:
+DROP TABLE t990999_emp;
+CREATE TABLE t990999_emp(empno NUMBER(4) PRIMARY KEY);
+INSERT INTO t990999_Emp(empno) VALUES (1000);
+INSERT INTO t990999_Emp(empno) VALUES (1001);
+INSERT INTO t990999_Emp(empno) VALUES (1002);
+SELECT * FROM t990999_Emp;
+Päring teises ühenduses
+Transaktsiooni kinnitamine
+Päring teises ühenduses
+Worksheet teksti kustutamine
+Script Output kustutamine
+SQL ajaloo vaatamine, sorteerimine, valimine
+DELETE lause kirjutamine
+Päring teises ühenduses
+Transaktsiooni kinnitamise valimine
+SQL*Plus/SQLcl käskude käivitamine:
+desc dept
+info emp
+
+Päringu koostamine visuaalses päringute koostamise vahendis
+
+SELECT
+    c##tud1.emp.empno,
+    c##tud1.emp.ename,
+    c##tud1.dept.deptno,
+    c##tud1.dept.dname AS "dept_name"
+FROM
+         c##tud1.dept
+    INNER JOIN c##tud1.emp ON c##tud1.dept.deptno = c##tud1.emp.deptno
+WHERE
+    ( c##tud1.dept.deptno = 10 )
+    OR ( c##tud1.dept.deptno = 20 )
+ORDER BY
+    c##tud1.dept.deptno,
+    c##tud1.emp.empno
+
+Lause täitmisplaani ja statistika vaatamine
+
+Worksheeti sulgemine ja uuesti avamine
+
+dbms_output.put_line protseduuri käivitamine:
+
+DECLARE
+result BOOLEAN;
+BEGIN
+result:=REGEXP_LIKE('+131231', '^([[:digit:]]|[+]|[[:space:]])+$');
+IF (result=true) THEN
+dbms_output.put_line('TRUE');
+ELSE
+dbms_output.put_line('FALSE');
+END IF;
+END;
+/
+
+Andmebaasiobjektide hierarhia
+Filtri lisamine (tabel vs. ühendus)
+Tabeli kirjelduse vaatamine (t990999_Emp):
+Läbi graafilise liidese veeru lisamine (ename varchar2(50))
+Läbi graafilise liidese ridade lisamine
+Läbi graafilise liidese ridade kustutamine
+Tabeli loomise lause genereerimine 
+Lisatud veeru kustutamine läbi graafilise liidese
+Tabeli kustutamine läbi graafilise kasutajaliidese
+
+Filtri eemaldamine
+Eksportimine
+Tabeli Emp seoste vaatamine (Model)
+
+Loogiline varukoopia (Tools=>Database Export)(tabelid EMP ja DEPT)
+
+All Reports => Data Dictionary Reports => Table
+User Tables
+Columns=>Datatype Occurrences
+
+Väljalogimine

@@ -1,0 +1,64 @@
+Ühenduse loomine (ssh tunnel)
+Andmebaasi loomine
+Andmebaasiobjektide hierarhia
+SQL lausete käivitamine - ükshaaval:
+CREATE TABLE Emp(empno SMALLINT PRIMARY KEY);
+INSERT INTO Emp(empno) VALUES (1000), (1001), (1002);
+SELECT * FROM Emp;
+Andmebaasiobjektide hierarhia värskendamine
+SQL lausete käivitamine - skriptina:
+DROP TABLE IF EXISTS Emp;
+CREATE TABLE Emp(empno SMALLINT PRIMARY KEY);
+INSERT INTO Emp(empno) VALUES (1000), (1001), (1002);
+SELECT * FROM Emp;
+Andmete muutmine päringu tulemuses
+Lausete käivitamine skriptina kui üks transaktsioon:
+CREATE TABLE A(a_id SMALLINT PRIMARY KEY);
+CREATE TABLE B(b_id SMALLINT PRMARY KEY);
+SQL lausete töötlemine redaktoris
+Auto commit
+DELETE FROM Emp;
+Päringute ajalugu (Query History)
+
+Andmebaasiobjektide hierarhia
+Tabeli kirjelduse vaatamine graafilises kasutajaliideses
+Läbi graafilise liidese veeru lisamine (Ename character varying (50))
+Muudatuse SQL lause vaatamine
+Tabeli loomise lause genereerimine (Object => Scripts)
+Muude skriptide genereerimine
+Lisatud veeru kustutamine läbi graafilise liidese
+Läbi graafilise liidese ridade lisamine
+Läbi graafilise liidese ridade kustutamine
+Täitmisplaani visuaalsel kujul vaatamine, sh Buffers:
+SELECT * FROM Emp;
+Tabeli kustutamine läbi graafilise kasutajaliidese
+Ühenduse sulgemine
+
+Ühenduse filtreerimine
+Objekti otsimine (andmebaas scott): dept, pk_
+ERD for database (andmebaas scott):
+Tabelite eemaldamine
+Tabeli detailide kuvamine/peitmine
+Auto Align
+Seoste esitamise tähistus
+SQL koodi genereerimine joonisel olevate tabelite kohta
+Joonise allalaadimine
+PSQL tool (andmebaas scott):
+\dt
+\d Emp
+Tabelis Emp olevate andmete eksport CSV formaadis ning avamine LibreOffice Calc programmiga
+Makro loomine:
+SELECT * 
+FROM INFORMATION_SCHEMA.tables 
+WHERE table_schema='public'
+ORDER BY table_name;
+SELECT *
+FROM $SELECTION$;
+Päringu tulemusest graafi genereerimine
+SELECT Extract(year FROM hiredate) AS year, Count(*) AS cnt
+FROM Emp
+GROUP BY year
+ORDER BY year;
+Andmebaasi kustutamine
+Loogiline varukoopia (hoiatus)
+Väljalogimine

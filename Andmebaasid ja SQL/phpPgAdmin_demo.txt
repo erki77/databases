@@ -1,0 +1,27 @@
+Ühenduse loomine
+Andmebaasi loomine
+Andmebaasiobjektide hierarhia
+SQL lausete käivitamine - skriptina:
+DROP TABLE IF EXISTS Emp;
+CREATE TABLE Emp(empno SMALLINT PRIMARY KEY);
+INSERT INTO Emp(empno) VALUES (1000), (1001), (1002);
+Andmebaasiobjektide hierarhia värskendamine
+SELECT * FROM Emp
+Lausete käivitamine skriptina kui üks transaktsioon:
+CREATE TABLE A(a_id SMALLINT PRIMARY KEY);
+CREATE TABLE B(b_id SMALLINT PRMARY KEY);
+
+Andmebaasiobjektide hierarhia
+Tabeli kirjelduse vaatamine graafilises kasutajaliideses
+Läbi graafilise liidese veeru lisamine (Ename character varying (50))
+Tabeli loomise lause genereerimine (Export=>Structure only)
+Lisatud veeru kustutamine läbi graafilise liidese
+Läbi graafilise liidese ridade lisamine
+Läbi graafilise liidese ridade kustutamine
+EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM Emp;
+Loogiline varukoopia
+Päringute ajalugu (History)
+Tabeli kustutamine läbi graafilise kasutajaliidese
+Objekti otsimine nime järgi (Find)(andmebaas scott): dept, pk_
+Andmebaasi kustutamine
+Väljalogimine
